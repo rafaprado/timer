@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="sr-app-status" tabindex="-1">Temporizador pausado</div>
+
+  <div id="app">
+    <div class="display">
+      <div id="timer" role="timer">
+        <time id="sr-time" tabindex="1"></time>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+
+
+      <div class="controls">
+        <button class="controls__button" id="pause" data-action="togglePlay" aria-label="pausar temporizador">
+          <i class="ph ph-pause-circle"></i>
+        </button>
+
+        <button class="controls__button" id="play" data-action="togglePlay" aria-label="inciar temporizador">
+          <i class="ph ph-play-circle"></i>
+        </button>
+
+        <button class="controls__button" id="reset" data-action="reset" aria-label="resetar temporizador">
+          <i class="ph ph-stop-circle"></i>
+        </button>
+
+        <button class="controls__button" id="add" data-action="add" aria-label="adicionar mais cinco minutos">
+          <i class="ph ph-plus-circle"></i>
+        </button>
+
+        <button class="controls__button" id="decrease" data-action="decrease" aria-label="diminuir cinco minutos">
+          <i class="ph ph-minus-circle"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="songs-panel">
+      <button class="song-button" data-sound="floresta" aria-label="tocar ou parar som de floresta">
+        <i class="ph ph-tree"></i>
+      </button>
+
+      <button class="song-button" data-sound="chuva" aria-label="tocar ou parar som de chuva">
+        <i class="ph ph-cloud-snow"></i>
+      </button>
+
+      <button class="song-button" data-sound="cafeteria" aria-label="tocar ou parar som de pessoas conversando">
+        <i class="ph ph-storefront"></i>
+      </button>
+
+      <button class="song-button" data-sound="lareira" aria-label="tocar ou parar som de lareira">
+        <i class="ph ph-fire"></i>
+      </button>
+    </div>
+
+  </div>
+<script type="module" src="./assets/main.js"></script>
+</body>
+</html>
